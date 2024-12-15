@@ -50,8 +50,8 @@ def load_data(image_dir, label_dir):
     return np.array(data), np.array(labels)
 
 # Replace 'your_image_path' and 'your_label_path' with the actual paths to your dataset
-image_dir = 'your_image_path'
-label_dir = 'your_label_path'
+image_dir = 'data'
+label_dir = 'label'
 data, labels = load_data(image_dir, label_dir)
 
 # Normalize data and convert labels to one-hot encoding
@@ -115,7 +115,9 @@ y_true = np.argmax(y_test, axis=1)
 print(classification_report(y_true, y_pred, target_names=categories))
 
 # Save the model
-model.save('hand_drawn_classifier.h5')
+model.save('hand_drawn_classifier.keras')
+
+
 
 # Plot training history
 plt.figure(figsize=(12, 4))
