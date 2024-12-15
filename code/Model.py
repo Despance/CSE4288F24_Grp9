@@ -15,7 +15,6 @@ num_classes = len(categories)
 img_size = 64  # Resize images to 64x64
 batch_size = 32
 epochs = 20
-
 # Load and preprocess the dataset
 def load_data(image_dir, label_dir):
     data = []
@@ -47,6 +46,8 @@ def load_data(image_dir, label_dir):
                 labels.append(label)
         except Exception as e:
             print(f"Error processing {img_path} or {label_file}: {e}")
+    print(f"Total number of images: {len(data)}")
+    print(f"Total number of labels: {len(labels)}")
     return np.array(data), np.array(labels)
 
 # Replace 'your_image_path' and 'your_label_path' with the actual paths to your dataset
