@@ -1,10 +1,10 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from keras.preprocessing.image import ImageDataGenerator
+from keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from PIL import Image
@@ -12,9 +12,9 @@ from PIL import Image
 # Configuration
 categories = ['bird', 'car', 'cloud', 'dog', 'flower', 'house', 'human', 'mountain', 'sun', 'tree']
 num_classes = len(categories)
-img_size = 64  # Resize images to 64x64
+img_size = 256  # Resize images to 256x256 pixels
 batch_size = 32
-epochs = 20
+epochs = 50
 # Load and preprocess the dataset
 def load_data(image_dir, label_dir):
     data = []

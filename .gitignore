@@ -1,3 +1,6 @@
 /code/data
 /code/label
 /code/hand_drawn_classifier.keras
+/data
+/label
+/test_images
