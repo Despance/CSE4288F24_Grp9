@@ -5,3 +5,4 @@
 /label
 /test_images
 /hand_drawn_classifier.keras 
+/child_drawing_classifier_with_aug.keras
